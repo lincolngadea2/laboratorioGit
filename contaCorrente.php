@@ -1,5 +1,5 @@
 <?php
-include './Conta.php';
+include 'Conta.php';
 /*
  * subclass of father class conta.
  */
@@ -11,9 +11,9 @@ include './Conta.php';
  */
 class contaCorrente extends Conta{
     
-    public function sacar($valor){
-        if($this->saldo >= $valor){
-            $this->saldo -=$valor;
+    public function sacar($saque){
+        if($this->saldo >= $saque){
+            $this->saldo -=$saque;
             $this->saldo -= 1;
         }else{
             echo "Saldo insuficiente";

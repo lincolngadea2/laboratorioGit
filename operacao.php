@@ -1,20 +1,22 @@
 <?php
 
 $valor = $_POST["txtValor"];
-$count = null;
+$saque = $_POST["txtSaque"];
+$conta = null;
 
 if($_POST["cbTipo"]==1){
-    include './contaCorrente.php';
-    $count = new contaCorrente;
+    include ("contaCorrente.php");
+    $conta = new contaCorrente;
 }
 if($_POST["cbTipo"]==2){
-    include './contaPoupanca.php';
-    $count = new contaPoupanca;
+    include ("contaPoupanca");
+    $conta = new contaPoupanca;
 }
-if($_POST["cbTipo"]==1){
-    include './contaSalario.php';
-    $count = new contaSalario;
+if($_POST["cbTipo"]==3){
+    include ("contaSalario.php");
+    $conta = new contaSalario;
 }
 
 $conta->depositar(100);
+$conta->sacar(30);
 $conta->verSaldo();

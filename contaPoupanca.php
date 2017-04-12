@@ -1,5 +1,5 @@
 <?php
-include './Conta.php';
+include 'Conta.php';
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,9 +14,9 @@ include './Conta.php';
  */
 class contaPoupanca extends Conta{
     
-       public function sacar($valor){
-        if($this->saldo >= $valor){
-            $this->saldo -=$valor;
+       public function sacar($saque){
+        if($this->saldo >= $saque){
+            $this->saldo -=$saque;
        }else{
             echo "Saldo insuficiente";
         }

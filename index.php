@@ -21,6 +21,7 @@ and open the template in the editor.
             </select>
             </br>
             Valor: <input type="text" name="txtValor"/>
+			Saque: <input type="text" name="txtSaque"/>
             </br>
             <input type="submit" value="OK"/>                
         </form>

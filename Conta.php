@@ -17,8 +17,7 @@ abstract class Conta {
     protected $saldo;
     
     public function depositar($valor){
-        
-        $this->saldo += $valor;
+          $this->saldo += $valor;
     }
     
     public function verSaldo(){

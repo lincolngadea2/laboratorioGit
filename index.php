@@ -20,8 +20,10 @@ and open the template in the editor.
                 <option value="3">Conta Salario</option>
             </select>
             </br>
-            Valor: <input type="text" name="txtValor"/>
-			Saque: <input type="text" name="txtSaque"/>
+            Valor: <input type="text" name="txtValor"/></br>
+            Cheques: <input type="text" name="txtCheque"/></br>
+            Saque: <input type="text" name="txtSaque"/>
+            
             </br>
             <input type="submit" value="OK"/>                
         </form>

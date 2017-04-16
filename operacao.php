@@ -1,20 +1,23 @@
 <?php
 
-$valor = $_POST["txtValor"];
-$saque = $_POST["txtSaque"];
+$valor = htmlspecialchars($_POST["txtValor"]);
+$saque = htmlspecialchars($_POST["txtSaque"]);
 $conta = null;
 
-if($_POST["cbTipo"]==1){
-    include ("contaCorrente.php");
+if(htmlspecialchars($_POST["cbTipo"])==1){
+    include ("./contaCorrente.php");
     $conta = new contaCorrente;
 }
-if($_POST["cbTipo"]==2){
-    include ("contaPoupanca");
+if(htmlspecialchars($_POST["cbTipo"])==2){
+    include ("./contaPoupanca.php");
     $conta = new contaPoupanca;
 }
-if($_POST["cbTipo"]==3){
-    include ("contaSalario.php");
+if(htmlspecialchars($_POST["cbTipo"])==3){
+    include ("./contaSalario.php");
     $conta = new contaSalario;
+}
+if(htmlspecialchars($_POST["txtCheque"])!= ""){
+    $conta->emitirCheque(htmlspecialchars($_POST["txtCheque"]));
 }
 
 $conta->depositar(100);

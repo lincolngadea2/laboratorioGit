@@ -26,5 +26,20 @@ abstract class Conta {
     }
     
     abstract function sacar($valor);
+    
+    public function emitirCheque($quantidade){
+        if($quantidade != ""){
+            $talao=1;
+            while($quantidade > 0){
+                echo "<br>Talão".$talao;
+                $talao++;
+                $quantidade -=1;
+            }
+        }else{
+            echo "Erro Quantidade Nulo...";
+        }      
+        
+    }
 }
+    
     

@@ -12,7 +12,7 @@ include 'Conta.php';
  *
  * @author Lincoln Gadea
  */
-class contaPoupanca extends Conta{
+final class contaPoupanca extends Conta{
     
        public function sacar($saque){
         if($this->saldo >= $saque){

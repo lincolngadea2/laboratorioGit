@@ -11,7 +11,7 @@ include ("Conta.php");
  *
  * @author Lincoln Gadea
  */
-class contaSalario extends Conta{
+final class contaSalario extends Conta{
     
        public function sacar($saque){
         if($this->saldo >= $saque){

@@ -16,8 +16,12 @@ if(htmlspecialchars($_POST["cbTipo"])==3){
     include ("./contaSalario.php");
     $conta = new contaSalario;
 }
-if(htmlspecialchars($_POST["txtCheque"])!= ""){
-    $conta->emitirCheque(htmlspecialchars($_POST["txtCheque"]));
+if($conta instanceof contaCorrente){
+    if(htmlspecialchars($_POST["txtCheque"])!= ""){
+        $conta->emitirCheque(htmlspecialchars($_POST["txtCheque"]));
+    }
+}else{
+    echo "<h3>Cheques apenas para Conta corrente</h3>";
 }
 
 $conta->depositar(100);

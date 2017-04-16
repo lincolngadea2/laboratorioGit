@@ -9,7 +9,7 @@ include 'Conta.php';
  *
  * @author Lincoln Gadea
  */
-class contaCorrente extends Conta{
+final class contaCorrente extends Conta{
     
     public function sacar($saque){
         if($this->saldo >= $saque){

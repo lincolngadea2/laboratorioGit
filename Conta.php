@@ -10,7 +10,7 @@
  *
  * @author Lincoln Gadea
  */
-abstract class Conta {
+class Conta {
     
     protected $agencia;
     protected $numero;
@@ -24,21 +24,11 @@ abstract class Conta {
         echo "</br>Saldo da conta ".$this->numero.":R$".$this->saldo;
     }
     
-    abstract function sacar($valor);
+     function sacar($valor);
     
-    public function emitirCheque($quantidade){
-        if($quantidade != ""){
-            $talao=1;
-            while($quantidade > 0){
-                echo "<br>Talão".$talao;
-                $talao++;
-                $quantidade -=1;
-            }
-        }else{
-            echo "Erro Quantidade Nulo...";
-        }      
+   
         
-    }
+    
 }
     
     

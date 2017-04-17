@@ -1,7 +1,7 @@
 <?php
 include 'Conta.php';
 
-final class contaPoupanca extends Conta{
+class contaPoupanca extends Conta{
     
        public function sacar($saque){
         if($this->saldo >= $saque){
